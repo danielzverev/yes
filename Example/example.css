@@ -1,0 +1,273 @@
+
+@font-face {
+font-family: 'BebasNeue', sans-serif;
+src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+Display&display=swap') format("woff1")
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    min-height: 100vh;
+    cursor: auto;
+  }
+  
+  body {
+    margin: 0;
+    background: radial-gradient(#89deff, #89deff);
+  }
+  
+  .page-title {
+    color: #ffffff;
+    font-family: BebasNeue, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+  }
+  
+  .game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .game-info {
+    font-family: creepy;
+    color: #ffffff;
+    font-size: 4em;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+  }
+  
+  .card {
+    position: relative;
+    height: 175px;
+    width: 125px;
+  }
+  
+  .card:hover {
+    cursor: auto;
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .card.visible .card-back {
+    transform: rotateY(-180deg);
+  }
+  
+  .card.visible .card-front {
+    transform: rotateY(0)
+  }
+  
+  .card.matched .card-value {
+    animation: dance 1s linear infinite 500ms;
+  }
+  
+  .overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: #992222;
+    font-family: Creepy, serif;
+  }
+  
+  .overlay-text-small {
+    font-size: .3em;
+  }
+  
+  .overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+  }
+  
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(255, 0, 0, 0.904);
+      font-size: 0;
+    }
+    to {
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 10em;
+    }
+  }
+  
+  @keyframes dance {
+    0%, 100%  {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-30deg);
+    }
+    75% {
+      transform: rotate(30deg);
+    }
+  }
+  
+  .card-back {
+    background-color: rgb(255, 255, 255);
+    border-color: #b62a18;
+  }
+  
+  .card-front {
+    background-color: #941511;
+    border-color: #ffffff;
+    transform: rotateY(180deg);
+  }
+  
+  .card-value {
+    transition: transform 100ms ease-in-out;
+    transform: scale(.9);
+    width: 120px;
+    height: 120px;
+  }
+  
+  .card-front:hover .card-value {
+    transform: scale(1);
+  }
+  
+  .flakes {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+  }
+  
+  .card-face:hover .flakes {
+    width: 52px;
+    height: 52px;
+  }
+  
+  .flakes-top-left {
+    transform: rotate(270deg);
+    top: 0;
+    left: 0;
+  }
+  
+  .flakes-top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .flakes-bottom-left {
+    transform: rotate(180deg);
+    bottom: 0;
+    left: 0;
+  }
+  
+  .flakes-bottom-right {
+    transform: rotate(90deg);
+    bottom: 0;
+    right: 0;
+  }
+  
+  .santa {
+    align-self: flex-start;
+    transform: translateY(6px);
+    transition: transform 100ms ease-in-out;
+    width: 170px;
+    height: 170px;
+  }
+  
+  .card-back:hover .santa {
+    transform: translateY(0)
+  }
+  
+  @media (max-width: 600px) {
+    .game-container {
+      grid-template-columns: repeat(2, auto);
+    }
+  
+    .game-info-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Background Styles Only */
+  
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+  
+  .side-links {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .side-link {
+    font-family: Raleway;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: white;
+    width: 180px;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .side-link-youtube {
+    background-color: red;
+  }
+  
+  .side-link-twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .side-link-github {
+    background-color: #6e5494;
+  }
+  
+  .side-link-text {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  .side-link-icon {
+    color: white;
+    font-size: 30px;
+  }
+
+
+

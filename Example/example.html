@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mix-Or-Match</title>
+  <link rel="stylesheet" href="example.css">
+  <link rel="javascript" href="example.js">
+  
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+Display&display=swap');
+</style>
+<body>
+  <h1 class="page-title">Mix-Or-Match</h1>
+  <div class="overlay-text visible">
+    Click to Start
+  </div>
+  <div id="game-over-text" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    VICTORY
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div class="game-container">
+    <div class="game-info-container">
+      <div class="game-info">
+        Time <span id="time-remaining">100</span>
+      </div>
+      <div class="game-info">
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="snowman.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="snowman.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="mistletoe2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="mistletoe2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="sleigh2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="sleigh2.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="snowtoy.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="snowtoy.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="wreath.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="wreath.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="doodle.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="doodle.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="star.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="star.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="bauble.png">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="santa" src="santa.png">
+      </div>
+      <div class="card-front card-face">
+        <img class="flakes flakes-top-left" src="flakes.png">
+        <img class="flakes flakes-top-right" src="flakes.png">
+        <img class="flakes flakes-bottom-left" src="flakes.png">
+        <img class="flakes flakes-bottom-right" src="flakes.png">
+        <img class="card-value" src="bauble.png">
+      </div>
+    </div>
+  </div>
+</body>
+
+<div class="side-links">
+    <a href="https://youtu.be/28VfzEiJgy4" target="_blank" class="side-link side-link-youtube">
+      <i class="fab fa-youtube-square side-link-icon"></i>
+      <span class="side-link-text">View Tutorial</span>
+    </a>
+    <a href="https://github.com/WebDevSimplified" target="_blank" class="side-link side-link-github side-link-icon">
+      <i class="fab fa-github-square"></i>
+      <span class="side-link-text">View GitHub</span>
+    </a>
+    <a href="https://twitter.com/DevSimplified" target="_blank" class="side-link side-link-twitter">
+      <i class="fab fa-twitter-square side-link-icon"></i>
+      <span class="side-link-text">View Twitter</span>
+    </a>
+  </div>
+  <script src="example.js"></script>
+</body>
+</html>
